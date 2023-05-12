@@ -13,28 +13,28 @@ func sumOfIntegersInString(_ string: String) -> Int {
 
 // SOLUTION 2:
 
-func sumOfIntegersInString(_ string: String) -> Int {
-    let stringArray = string.components(separatedBy: CharacterSet.decimalDigits.inverted)
-    let stringArrayFinal = stringArray.compactMap({Int($0)})
-    let stringArraySum = stringArrayFinal.reduce(0, +)
-    return stringArraySum
-}
+// func sumOfIntegersInString(_ string: String) -> Int {
+//     let stringArray = string.components(separatedBy: CharacterSet.decimalDigits.inverted)
+//     let stringArrayFinal = stringArray.compactMap({Int($0)})
+//     let stringArraySum = stringArrayFinal.reduce(0, +)
+//     return stringArraySum
+// }
 
 // SOLUTION 3:
 
-func sumOfIntegersInString(_ string: String) -> Int {
-    var result = 0
-    var number = "0"
-    for (index, char) in string.enumerated() {
-      if char.isNumber {
-        number += String(char)
-        if index == string.count - 1 {
-          result += Int(number)!
-        } 
-      } else {
-        result += Int(number)!
-        number = "0"
-      }
-    }
-    return result
-}
+// func sumOfIntegersInString(_ string: String) -> Int {
+//     var result = 0
+//     var number = "0"
+//     for (index, char) in string.enumerated() {
+//       if char.isNumber {
+//         number += String(char)
+//         if index == string.count - 1 {
+//           result += Int(number)!
+//         } 
+//       } else {
+//         result += Int(number)!
+//         number = "0"
+//       }
+//     }
+//     return result
+// }
